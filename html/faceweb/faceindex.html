@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- 網頁編碼 -->
+        <meta charset="'UTF-8"/> <!-- utf8是為了看懂中文 -->
+        <meta name="description" content="這個網站是用來辨識真人、假人"/> <!-- 描述 -->
+        <meta name="author" content="chiang yu hung"/> <!-- 作者 -->
+        <meta name="keywords" content="辨識,數字,人臉,face"/><!-- 搜尋用關鍵字 -->
+        <meta name="viewport" content="width=device-width, initial-sacle=1.0"/> <!-- 手機電腦比例轉換 -->
+        <link rel="stylesheet" href="facestyle.css"/> <!-- css導入 -->
+        <title>臉部辨識的網站</title>
+    </head>
+    <body>
+        <h1 style='text-align:center'>Fake-Vs-Real-Faces</h1>
+        <h2>資料來源</h2>
+        <lu>
+            <li><a href="https://www.kaggle.com/datasets/hamzaboulahia/hardfakevsrealfaces">kaggle</a></li>
+            <br/>
+            <li><a href="https://unsplash.com/">Real face</a></li>
+            <br/>
+            <li><a href="https://thispersondoesnotexist.com/">Fake face</a></li>
+        </lu>
+        <h2>圖片範例</h2>
+        <p>以下真假圖片各有4張 請將滑鼠移至圖片來觀看答案</p>
+        <table width="100%" style='text-align:center'>
+            <tr >
+                <td><img style=" border: 1px solid black" id="img1" src="real1.jpg" alt='image' width=200px/></td>
+                <td><img style=" border: 1px solid black" id="img7"  src="fake3.jpg" alt='image' width=200px/></td>
+                <td><img style=" border: 1px solid black" id="img6"  src="fake2.jpg" alt='image' width=200px/></td>
+                <td><img style=" border: 1px solid black" id="img4" src="real4.jpg" alt='image' width=200px/></td>
+            </tr>
+            <br/>
+            <tr>
+                <td><img style=" border: 1px solid black" id="img5"  src="fake1.jpg" alt='image' width=200px/></td>                
+                <td><img style=" border: 1px solid black" id="img2" src="real2.jpg" alt='image' width=200px/></td>
+                <td><img style=" border: 1px solid black" id="img8"  src="fake4.jpg" alt='image' width=200px/></td>
+                <td><img style=" border: 1px solid black" id="img3" src="real3.jpg" alt='image' width=200px/></td>
+            </tr>
+        </table>
+        <div id = 'image' class="img">
+          
+        </div>
+        <script src="facescript.js"></script>
+    </body>
+</html>

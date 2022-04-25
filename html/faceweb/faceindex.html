@@ -11,20 +11,20 @@
         <title>臉部辨識的網站</title>
     </head>
     <body>
-        <h1 style='text-align:center'>Fake-Vs-Real-Faces</h1>
+        <h1 style='text-align:center'>Fake-Vs-Real-Faces</h1> <!-- 標題用h1~6 1最大 6最小 -->
         <h2>資料來源</h2>
-        <lu>
+        <lu> <!-- 標點 羅馬字 數字 英文 -->
             <li><a href="https://www.kaggle.com/datasets/hamzaboulahia/hardfakevsrealfaces">kaggle</a></li>
-            <br/>
+            <br/> <!--換行-->
             <li><a href="https://unsplash.com/">Real face</a></li>
             <br/>
             <li><a href="https://thispersondoesnotexist.com/">Fake face</a></li>
         </lu>
         <h2>圖片範例</h2>
-        <p>以下真假圖片各有4張 請將滑鼠移至圖片來觀看答案</p>
-        <table width="100%" style='text-align:center'>
-            <tr >
-                <td><img style=" border: 1px solid black" id="img1" src="real1.jpg" alt='image' width=200px/></td>
+        <p>以下真假圖片各有4張 請將滑鼠移至圖片來觀看答案</p> <!--文字-->
+        <table width="100%" style='text-align:center'><!--表格-->
+            <tr ><!--列-->
+                <td><img style=" border: 1px solid black" id="img1" src="real1.jpg" alt='image' width=200px/></td><!--列的第一個行-->
                 <td><img style=" border: 1px solid black" id="img7"  src="fake3.jpg" alt='image' width=200px/></td>
                 <td><img style=" border: 1px solid black" id="img6"  src="fake2.jpg" alt='image' width=200px/></td>
                 <td><img style=" border: 1px solid black" id="img4" src="real4.jpg" alt='image' width=200px/></td>
@@ -37,9 +37,12 @@
                 <td><img style=" border: 1px solid black" id="img3" src="real3.jpg" alt='image' width=200px/></td>
             </tr>
         </table>
-        <div id = 'image' class="img">
-          
-        </div>
-        <script src="facescript.js"></script>
+        <h2>實際操作</h2>
+        <!--input id="file-uploader"  accept="image/*" type="file"  multiple="multiple"/--><!-- multiple可以一次上傳多個檔案 accept限制上傳檔案的類型-->
+        <form action="/somewhere/to/upload" enctype="multipart/form-data">
+            <input type="file" onchange="readURL(this)" targetID="preview_progressbarTW_img" accept="image/gif, image/jpeg, image/png"/ >         
+            <img id="preview_progressbarTW_img" src="#" width="300px"/>         
+         </form>
+        <script src="facescript.js"></script> <!-- js導入 -->
     </body>
 </html>
